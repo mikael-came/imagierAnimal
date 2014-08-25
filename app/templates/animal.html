@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="styles/animal.css">
+<audio id="audio">
+  <source id="mp3Source" type="audio/mp3"></source>
+</audio>
+
+<div id="played" hidden="true" value="none"></div>
+
+
+  <div class="row">
+
+  {{#animaux}}
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="thumbnail">
+          <a class="thumbnail" id="{{nom}}">
+            <img src="{{image}}" onclick="playthis('{{nom}}');" class="img-responsive img-rounded" alt="Responsive image">
+          </a>
+          <div class="caption align-center text-center">
+            <H2>{{titre}} {{nom}}</H2>
+          </div>
+        </div>
+        <audio id="{{nom}}audio" preload="auto" >
+          <source id="mp3Source" src="{{son}}" type="audio/mp3"  ></source>
+        </audio>
+    </div>
+  {{/animaux}}
+
+  </div>
